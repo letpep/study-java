@@ -2,7 +2,7 @@ server:
       port: 18087
 spring:
         profiles:
-                  active: dev
+                  active: prod
         application:
                     name : letpep-config-client
 
@@ -12,6 +12,7 @@ spring:
                             extension-configs:
                               - data-id: letpep-user.yaml
                                 group: letpep
+                                refresh: true
                     discovery:
                               server-addr: 59.110.213.45:8848
 management:
