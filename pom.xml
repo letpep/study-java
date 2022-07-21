@@ -23,6 +23,7 @@
         <module>nacos-config-client</module>
         <module>nacos-2db</module>
         <module>multi-datasource</module>
+        <module>nacos-ribbon</module>
     </modules>
 
     <packaging>pom</packaging>
