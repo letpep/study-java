@@ -24,6 +24,7 @@
         <module>nacos-2db</module>
         <module>multi-datasource</module>
         <module>nacos-ribbon</module>
+        <module>nacos-feignclient</module>
     </modules>
 
     <packaging>pom</packaging>
