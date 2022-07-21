@@ -1,0 +1,26 @@
+server:
+      port: 18087
+spring:
+        profiles:
+                  active: dev
+        application:
+                    name : letpep-config-client
+
+        cloud:
+              nacos:
+                    config:
+                            extension-configs:
+                              - data-id: letpep-mybatis-multi.yaml
+                                group: letpep
+                                refresh: true
+                              - data-id: letpep-datasource-multi.yaml
+                                group: letpep
+                                refresh: true
+                    discovery:
+                              server-addr: 59.110.213.45:8848
+management:
+          endpoints:
+                     web:
+                        exposure:
+                                  include :*
+
