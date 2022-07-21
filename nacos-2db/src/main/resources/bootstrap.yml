@@ -14,8 +14,8 @@ spring:
                                 group: letpep
                                 refresh: true
                               - data-id: letpep-datasource.yaml
-                                  group: letpep
-                                  refresh: true
+                                group: letpep
+                                refresh: true
                     discovery:
                               server-addr: 59.110.213.45:8848
 management:
