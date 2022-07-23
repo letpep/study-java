@@ -23,4 +23,9 @@ management:
                      web:
                         exposure:
                                   include :*
+feign:
+  sentinel:
+    enabled: true
+#  hystrix:
+#    enabled: false
 

@@ -25,6 +25,7 @@
         <module>multi-datasource</module>
         <module>nacos-ribbon</module>
         <module>nacos-feignclient</module>
+        <module>nacos-sentinel</module>
     </modules>
 
     <packaging>pom</packaging>
