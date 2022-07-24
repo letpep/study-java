@@ -10,6 +10,11 @@ public class Usercontroller {
     private String serverPort;
     @GetMapping("/helloprovider")
     public String helloNacos(){
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello --"+serverPort;
     }
 }
