@@ -1,13 +1,13 @@
-package com.letpep.nacosconfigclient;
+package com.letpep.demosentinel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NacosSentinelApplicationTests {
+class DemoSentinelApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

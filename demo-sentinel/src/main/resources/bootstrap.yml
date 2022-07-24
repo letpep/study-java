@@ -26,6 +26,6 @@ management:
 feign:
   sentinel:
     enabled: true
-#  hystrix:
-#    enabled: false
+  hystrix:
+    enabled: false
 

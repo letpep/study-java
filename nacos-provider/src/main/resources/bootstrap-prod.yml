@@ -6,7 +6,4 @@ spring:
         namespace: 24186e06-0590-4a60-a7c6-1a78f8636cb1
     sentinel:
       transport:
-        dashboard: 127.0.0.1:8089
-        port: 8719
-        clientIp: 127.0.0.1
-#        dashboard: 59.110.213.45:8849
+        dashboard: http://59.110.213.45:8849/

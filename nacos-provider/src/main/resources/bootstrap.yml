@@ -1,0 +1,31 @@
+server:
+      port: 18087
+spring:
+        profiles:
+                  active: dev
+        application:
+                    name : letpep-sentiel
+
+        cloud:
+              nacos:
+                    config:
+                            extension-configs:
+                              - data-id: letpep-user.yaml
+                                group: letpep
+                                refresh: true
+#                              - data-id: letpep-common.yaml
+#                                group: letpep
+#                                refresh: true
+                    discovery:
+                              server-addr: 59.110.213.45:8848
+management:
+          endpoints:
+                     web:
+                        exposure:
+                                  include :*
+#feign:
+#  sentinel:
+#    enabled: true
+#  hystrix:
+#    enabled: false
+
