@@ -23,4 +23,15 @@ public class SentinelServiceImpl implements SentinelService {
     public Integer lkCount() {
         return 100;
     }
+    @Override
+    @SentinelResource(value ="SentinelService.lkcount2")
+    public Integer lkCount2() {
+        return 101;
+    }
+
+    @Override
+    @SentinelResource(value ="SentinelService.lkcount3")
+    public Integer lkCount3() {
+        return 102;
+    }
 }

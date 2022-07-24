@@ -29,6 +29,7 @@ public class HelloWorldController {
     //代码流控本地接口
     @GetMapping("hellolk")
     public Integer helloLK(){
+        System.out.println(sentinelService.lkCount2());
         return sentinelService.lkCount();
     }
 
