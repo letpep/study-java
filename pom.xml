@@ -26,6 +26,7 @@
         <module>nacos-ribbon</module>
         <module>nacos-feignclient</module>
         <module>demo-sentinel</module>
+        <module>gateway</module>
     </modules>
 
     <packaging>pom</packaging>
