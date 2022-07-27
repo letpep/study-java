@@ -27,6 +27,7 @@
         <module>nacos-feignclient</module>
         <module>demo-sentinel</module>
         <module>gateway</module>
+        <module>common</module>
     </modules>
 
     <packaging>pom</packaging>
