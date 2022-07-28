@@ -49,9 +49,9 @@ public class StreamTest {
 
         System.out.println(collected);
         List<User> users = new ArrayList<User>();
-        users.add(new User("lily",24));
-        users.add(new User("lily",24));
-        users.add(new User("lily",24));
+        users.add(new User(1,"lily",24));
+        users.add(new User(2,"lily",24));
+        users.add(new User(3,"lily",24));
         List<User> collected2 = users.stream().distinct().collect(Collectors.toList());
         collected2.forEach(user-> System.out.println(user.getName()));
     }
@@ -79,9 +79,9 @@ public class StreamTest {
     //将流中元素转换成map,map的key value，都可以是一个lamda函数
     public void collectMap(){
         List<User> users = new ArrayList<User>();
-        users.add(new User("lily",25));
-        users.add(new User("jhon",26));
-        users.add(new User("mark",27));
+        users.add(new User(1,"lily",24));
+        users.add(new User(2,"lily",24));
+        users.add(new User(3,"lily",24));
 //        Map<Integer, String> userMap = users.stream().map(user -> {
 //            user.setName(user.getName().concat("_letpep"));
 //            return user;
@@ -96,9 +96,9 @@ public class StreamTest {
 
     public void collectGroup(){
         List<User> users = new ArrayList<User>();
-        users.add(new User("lily",25));
-        users.add(new User("jhon",26));
-        users.add(new User("mark",27));
+        users.add(new User(1,"lily",24));
+        users.add(new User(2,"lily",24));
+        users.add(new User(3,"lily",24));
         Map<Integer, List<User>> group1 = users.stream().collect(Collectors.groupingBy(user -> user.getAge()));
         Map<Integer, Set<User>> group2 = users.stream().collect(Collectors.groupingBy(user -> user.getAge(), Collectors.toSet()));
         System.out.println(group1);
@@ -109,9 +109,9 @@ public class StreamTest {
 
     public void foreachT(){
         List<User> users = new ArrayList<User>();
-        users.add(new User("lily",25));
-        users.add(new User("jhon",26));
-        users.add(new User("mark",27));
+        users.add(new User(1,"lily",24));
+        users.add(new User(2,"lily",24));
+        users.add(new User(3,"lily",24));
         users.stream().forEach(user-> System.out.println(user.getName()));
     }
 
