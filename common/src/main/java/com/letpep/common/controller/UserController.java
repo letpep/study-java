@@ -1,7 +1,7 @@
 package com.letpep.common.controller;
 
 import com.letpep.common.dao.UserMapper;
-import com.letpep.common.java8.User;
+import com.letpep.common.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

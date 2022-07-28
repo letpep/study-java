@@ -1,4 +1,4 @@
-package com.letpep.common.java8;
+package com.letpep.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

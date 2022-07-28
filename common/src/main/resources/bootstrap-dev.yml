@@ -9,4 +9,9 @@ spring:
     password: letpep
     jdbc-url: jdbc:mysql://59.110.213.45:3306/letpep_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.jdbc.Driver
+#指定myBatis的核心配置文件与Mapper映射文件
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  # 注意：对应实体类的路径
+  type-aliases-package: com.letpep.common.model
 

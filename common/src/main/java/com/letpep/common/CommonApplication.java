@@ -4,12 +4,14 @@ import com.letpep.common.config.MyProperties;
 import com.letpep.common.model.Cat;
 import com.letpep.common.model.Dog;
 import com.letpep.common.model.Person;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
+@MapperScan("com.letpep.common.dao")
 public class CommonApplication {
 
     public static void main(String[] args) {
