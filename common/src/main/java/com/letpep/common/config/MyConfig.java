@@ -17,7 +17,7 @@ public class MyConfig {
     @Scope(SCOPE_PROTOTYPE)//多例
     public Cat getCat (){
         System.out.println("创建cat");
-        return new Cat("cat1",25);
+        return new Cat("cat1",25,11);
     }
     @Bean("dog1") //默认单例
     @Lazy(true) //懒加载

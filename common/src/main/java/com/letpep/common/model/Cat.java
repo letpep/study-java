@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class Cat {
     private String name;
     private int age;
+    public int age2;
 }

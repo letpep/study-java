@@ -1,10 +1,12 @@
 package com.letpep.common;
 
 import com.letpep.common.config.MyProperties;
+import com.letpep.common.controller.RemotApi;
 import com.letpep.common.model.Cat;
 import com.letpep.common.model.Dog;
 import com.letpep.common.model.Person;
 import com.letpep.common.redis.RedisService;
+import feign.Feign;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,6 +34,11 @@ public class CommonApplication {
         System.out.println(context.getBean(MyProperties.class).getName());
         (context.getBean(RedisService.class)).setString("test","testvalue");
         (context.getBean(RedisService.class)).setExpireTime("test",5);
+        for (int i=1;i<=100000;i++){
+            RemotApi target = Feign.builder().target(RemotApi.class, "http://59.110.213.45:18087");
+            System.out.println( target.getHello());
+        }
+
     }
 
 }
