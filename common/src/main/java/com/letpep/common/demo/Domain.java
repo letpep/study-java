@@ -6,6 +6,8 @@ import com.letpep.common.model.SingltonPerson;
 import org.openjdk.jol.info.ClassLayout;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Domain {
     public static void main(String[] args) throws InterruptedException {
@@ -13,6 +15,7 @@ public class Domain {
 //        System.out.println(p);
         Person p = new Person();
 
+        String a = new String ("abc");
         p.setName(new String("jhad jakdkkdjjjjjjjjjjjjjjjjj"));
         p.setLen(new Double(2.333333333333333333333));
         p.setDog(new Dog("dog",1));

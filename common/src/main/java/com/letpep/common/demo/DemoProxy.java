@@ -9,9 +9,12 @@ import com.letpep.common.service.Userimpl;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 动态代理实现
+ */
 public class DemoProxy {
     public static void main(String[] args) {
-//       jdkdy();
+       jdkdy();
        cglibdy();
     }
     public static void jdkdy(){
