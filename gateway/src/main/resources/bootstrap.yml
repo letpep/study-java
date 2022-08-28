@@ -1,0 +1,32 @@
+server:
+      port: 18090
+spring:
+        profiles:
+                  active: dev
+        application:
+                    name : letpep-gateway
+
+        cloud:
+              nacos:
+                    discovery:
+                              server-addr: 59.110.213.45:8848
+              gateway:
+                discovery:
+                  locator:
+                    enabled: true
+                routes:
+                  - id: letpep-provider
+                    uri: lb://letpep-nacos-provider
+                    predicates:
+                      - Path=/letpep-nacos-provider/**
+                    filters:
+                      - StripPrefix=1
+
+
+management:
+          endpoints:
+                     web:
+                        exposure:
+                                  include :*
+
+
