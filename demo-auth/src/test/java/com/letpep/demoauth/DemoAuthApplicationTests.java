@@ -1,10 +1,10 @@
-package com.letpep.chatserver;
+package com.letpep.demoauth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChatServerApplicationTests {
+class DemoAuthApplicationTests {
 
     @Test
     void contextLoads() {

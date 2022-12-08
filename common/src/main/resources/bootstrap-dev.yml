@@ -14,6 +14,9 @@ spring:
     port: 6379
     database: 0
     password: tttt
+    timeout: 10000ms
+    connectionpool:
+      size: 10
 #指定myBatis的核心配置文件与Mapper映射文件
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -18,9 +18,26 @@ spring:
                   - id: letpep-provider
                     uri: lb://letpep-nacos-provider
                     predicates:
-                      - Path=/letpep-nacos-provider/**
+                      - Path=/provider2/**
                     filters:
                       - StripPrefix=1
+              sentinel:
+                transport:
+                  dashboard: 127.0.0.1:8089
+                datasource:
+                  # 名字随意
+                  ds:
+                    nacos:
+                      # nacos的访问地址，，根据上面准备工作中启动的实例配置
+                      server-addr: 59.110.213.45:8848
+                      # nacos中存储规则的groupId
+                      groupId: letpep
+                      # nacos中存储规则的dataId
+                      dataId: ${spring.application.name}-rules
+                      # 用来定义存储的规则类型
+                      rule-type: flow
+                      data-type: json
+
 
 
 management:
@@ -28,5 +45,9 @@ management:
                      web:
                         exposure:
                                   include :*
-
+feign:
+  sentinel:
+    enabled: true
+  hystrix:
+    enabled: false
 

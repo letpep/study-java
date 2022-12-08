@@ -1,5 +1,6 @@
 package com.letpep.demosentinel.client;
 
+
 import com.letpep.demosentinel.FallBackUserService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;

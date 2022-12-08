@@ -6,14 +6,28 @@
         <groupId>com.letpep</groupId>
         <artifactId>study-java</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.letpep</groupId>
-    <artifactId>nacos-provider</artifactId>
+    <artifactId>demo-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos-provider</name>
+    <name>demo-auth</name>
     <description>Demo project for Spring Boot</description>
-
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>2.3.3.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -23,15 +37,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <!--            <version>2021.0.1.0</version>-->
         </dependency>
     </dependencies>
 

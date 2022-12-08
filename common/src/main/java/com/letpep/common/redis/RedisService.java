@@ -14,6 +14,7 @@ public class RedisService {
     private StringRedisTemplate stringRedisTemplate;
     public void setString (String key ,String value){
         stringRedisTemplate.opsForValue().set(key,value);
+        stringRedisTemplate.opsForValue().set(key,value);
     }
     public  void setExpireTime (String key ,long timeout){
         stringRedisTemplate.boundValueOps(key).expire(timeout,TimeUnit.SECONDS);

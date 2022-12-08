@@ -40,13 +40,13 @@ public class CommonApplication {
 //            RemotApi target = Feign.builder().target(RemotApi.class, "http://59.110.213.45:18087");
 //            System.out.println( target.getHello());
 //        }
-        RedissonClient redissonClient =(RedissonClient) context.getBean("redisson");
-        redissonClient.getBucket("test").set("helloredission");
-        RLock lock = redissonClient.getLock(Thread.currentThread().getName());
-        lock.lock();
-        lock.unlock();
-
-        System.out.println(redissonClient.getBucket("test").get());
+//        RedissonClient redissonClient =(RedissonClient) context.getBean("redisson");
+//        redissonClient.getBucket("test").set("helloredission");
+//        RLock lock = redissonClient.getLock(Thread.currentThread().getName());
+//        lock.lock();
+//        lock.unlock();
+//
+//        System.out.println(redissonClient.getBucket("test").get());
     }
 
 }

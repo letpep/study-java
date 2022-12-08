@@ -1,14 +1,13 @@
-package com.letpep.mqprovider;
+package com.letpep.demoauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MqProviderApplication {
+public class DemoAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MqProviderApplication.class, args);
-
+        SpringApplication.run(DemoAuthApplication.class, args);
     }
 
 }

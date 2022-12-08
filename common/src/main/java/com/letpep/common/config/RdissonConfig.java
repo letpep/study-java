@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class RdissonConfig {
     @Value("${spring.redis.host}")
     private String redisurl;
@@ -22,6 +22,10 @@ public class RdissonConfig {
         //可以用"rediss://"来启用SSL连接
         singleServerConfig.setAddress("redis://"+redisurl+":6379");
         singleServerConfig.setPassword("tttt");
+        singleServerConfig.setConnectionMinimumIdleSize(10);
+        singleServerConfig.setConnectionPoolSize(11);
+
+
         RedissonClient redisson = Redisson.create(config);
         return redisson;
 

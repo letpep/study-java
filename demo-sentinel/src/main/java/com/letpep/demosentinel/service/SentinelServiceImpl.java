@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class SentinelServiceImpl implements SentinelService {
 
-
-
     public Integer fail(BlockException e){
         e.printStackTrace();
         System.out.println("blocked");
@@ -18,7 +16,7 @@ public class SentinelServiceImpl implements SentinelService {
 
 
     @Override
-    @SentinelResource(value ="SentinelService.lkcount",blockHandler = "fail"
+    @SentinelResource(value ="SentinelService.lkcount",blockHandler = "demoBlockHandler"
     )
     public Integer lkCount() {
         return 100;
@@ -33,5 +31,9 @@ public class SentinelServiceImpl implements SentinelService {
     @SentinelResource(value ="SentinelService.lkcount3")
     public Integer lkCount3() {
         return 102;
+    }
+    public Integer demoBlockHandler(BlockException e) {
+        System.out.println("------------正在限流------------");
+        return -100;
     }
 }
